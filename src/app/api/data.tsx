@@ -12,18 +12,23 @@ export const menuItems = [
 export const count = [
     {
         icon: getImgPath("/images/counter/star.svg"),
-        value: "4.86",
-        description: "Out of 5 stars from 3896 reviews on Google platform",
+        value: "3.96",
+        description: "GPA / 4.00",
+    },
+    {
+        icon: getImgPath("/images/counter/star.svg"),
+        value: "2+",
+        description: "National Awards",
     },
     {
         icon: getImgPath("/images/counter/admin.svg"),
-        value: "364",
-        description: "Client testimonials received in the year 2021",
+        value: "3",
+        description: "Cisco Certifications",
     },
     {
         icon: getImgPath("/images/counter/bag.svg"),
-        value: "45M+",
-        description: "Revenue generated through new projects & marketing",
+        value: "5+",
+        description: "IoT Prototypes Built",
     },
 ];
 
@@ -132,5 +137,5 @@ export const portfolioinfo = [
         info: 'Designation',
         Class: 'md:mt-0'
     },
-    
+
 ]

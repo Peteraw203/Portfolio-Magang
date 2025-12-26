@@ -19,27 +19,22 @@ const Hero = () => {
             </span>
           </div>
           <h1 className='text-midnight_text font-bold dark:text-white text-4xl  md:text-5xl md:leading-[1.15]'>
-            Unveiling My Professional Odyssey: Portfolio Highlights
+            Bridging Hardware with Intelligent Software
           </h1>
-          <p className='text-grey dark:text-white/70 text-xl font-semibold'>
-            A brief introduction about myself and my professional objectives.
+          <p className='text-grey dark:text-white/70 text-lg font-normal'>
+            Hi, I am Peter Abednego Wijaya. An IoT Engineer specializing in Embedded Systems, Network Security (CCNA), and Edge AI. I build secure, scalable, and intelligent IoT solutions for the future of Smart Cities.
           </p>
-          <a
-            href='#learn-more'
-            className='py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300 px-8'>
-            Get Started
-          </a>
-          <div className='flex items-center mt-12 gap-4'>
-
-            <div>
-              <p className='text-sm font-normal text-grey max-w-56'>
-                Need help?{' '}
-                <Link href='#' className='text-primary hover:text-blue-700'>
-                  Contact our experts
-                </Link>{' '}
-                Tell us about your project
-              </p>
-            </div>
+          <div className='flex gap-4'>
+            <a
+              href='#portfolio'
+              className='py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300 px-8'>
+              View Case Studies
+            </a>
+            <a
+              href='#resume'
+              className='py-3 bg-transparent border border-blue-600 text-blue-600 dark:text-white dark:border-white rounded-md hover:bg-blue-600 hover:text-white transition duration-300 px-8'>
+              Download Resume
+            </a>
           </div>
         </div>
 

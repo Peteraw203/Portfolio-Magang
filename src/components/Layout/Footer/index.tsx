@@ -21,14 +21,7 @@ const Footer: FC = () => {
                   unoptimized
                 />
               </Link>
-              <h2 className='text-white py-10 text-[40px] leading-tight font-bold'>
-                Ready to get started?
-              </h2>
-              <Link
-                href='#'
-                className='px-9 py-3 rounded-lg bg-primary text-white hover:bg-blue-700 hover:shadow-none'>
-                Get Started
-              </Link>
+
             </div>
           </div>
           <div className='md:col-span-4 sm:col-span-6 col-span-12 sm:flex items-center sm:min-h-25 py-10 justify-center shrink-0 md:border-r border-b sm:border-b-0 border-solid border-dark_border'>

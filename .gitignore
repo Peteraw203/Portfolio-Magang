@@ -53,3 +53,12 @@ next-env.d.ts
 
 # firebase
 src/lib/firebase.ts
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Logs
+*.log
+logs
+*.log.*

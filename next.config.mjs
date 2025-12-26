@@ -3,6 +3,7 @@
 const basePath = "";
 
 const nextConfig = {
+  output: "export",
   basePath,
   assetPrefix: basePath,
   images: {
