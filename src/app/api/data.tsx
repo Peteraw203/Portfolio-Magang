@@ -32,11 +32,6 @@ export const count = [
     },
 ];
 
-export const Progress = [
-    { title: 'UX Research and Testing', Progress: 95 },
-    { title: 'Product Management', Progress: 84 },
-    { title: 'UI & Visual Design', Progress: 90 }
-];
 
 export const Servicebox = [
     {
@@ -56,86 +51,160 @@ export const Servicebox = [
     },
 ]
 
-export const portfolioinfo = [
-    {
-        image: getImgPath('/images/portfolio/cozycasa.png'),
-        alt: 'Portfolio',
-        title: 'Cozycasa',
-        slug: 'Cozycasa',
-        info: 'Designation',
-        Class: 'md:mt-0'
-    },
-    {
-        image: getImgPath('/images/portfolio/mars.png'),
-        alt: 'Portfolio',
-        title: 'Mars',
-        slug: 'Mars',
-        info: 'Designation',
-        Class: 'md:mt-24'
-    },
-    {
-        image: getImgPath('/images/portfolio/humans.png'),
-        alt: 'Portfolio',
-        title: 'Everyday Humans',
-        slug: 'everyday-humans',
-        info: 'Designation',
-        Class: 'md:mt-0'
-    },
-    {
-        image: getImgPath('/images/portfolio/roket-squred.png'),
-        alt: 'Portfolio',
-        title: 'Rocket Squared',
-        slug: 'rocket-squared',
-        info: 'Designation',
-        Class: 'md:mt-24'
-    },
-    {
-        image: getImgPath('/images/portfolio/panda-logo.png'),
-        alt: 'Portfolio',
-        title: 'Panda Logo',
-        slug: 'panda-logo',
-        info: 'Designation',
-        Class: 'md:mt-0'
-    },
-    {
-        image: getImgPath('/images/portfolio/humans.png'),
-        alt: 'Portfolio',
-        title: 'Fusion Dynamics',
-        slug: 'fusion-dynamics',
-        info: 'Designation',
-        Class: 'md:mt-0'
-    },
-    {
-        image: getImgPath('/images/portfolio/cozycasa.png'),
-        alt: 'Portfolio',
-        title: 'InnovateX Ventures',
-        slug: 'innovate-x-ventures',
-        info: 'Designation',
-        Class: 'md:mt-24'
-    },
-    {
-        image: getImgPath('/images/portfolio/mars.png'),
-        alt: 'Portfolio',
-        title: 'Nebula Holdings',
-        slug: 'nebula-holdings',
-        info: 'Designation',
-        Class: 'md:mt-0'
-    },
-    {
-        image: getImgPath('/images/portfolio/panda-logo.png'),
-        alt: 'Portfolio',
-        title: 'Summit Partners',
-        slug: 'summit-partners',
-        info: 'Designation',
-        Class: 'md:mt-24'
-    },
-    {
-        image: getImgPath('/images/portfolio/roket-squred.png'),
-        alt: 'Portfolio',
-        title: 'Apex Strategies',
-        slug: 'apex-strategies',
-        info: 'Designation',
-        Class: 'md:mt-0'
-    },
+export interface PortfolioItem {
+    image: string;
+    alt: string;
+    title: string;
+    slug: string;
+    info: string;
+    Class: string;
+    challenge?: string;
+    solution?: string;
+    techStack?: string[];
+    features?: string[];
+    githubLink?: string;
+    demoLink?: string;
+    schematicImage?: string;
+    hardwareImage?: string;
+}
 
+export const portfolioinfo: PortfolioItem[] = [
+    {
+        image: getImgPath('/images/portfolio/smart-dehumidifier.jpg'),
+        alt: 'Smart Portable Dehumidifier Project',
+        title: 'Smart Portable Dehumidifier',
+        slug: 'smart-portable-dehumidifier',
+        info: 'IoT & Gen-AI Integration (1st Winner)',
+        Class: 'md:mt-0',
+        techStack: ['ESP32', 'C++', 'Android (Java/Kotlin)', 'Gemini API', 'MQTT'],
+        challenge: 'Traditional dehumidifiers lack intelligent control and adaptability, leading to inefficient energy usage and poor air quality management in portable environments.',
+        solution: 'Engineered an IoT-based dehumidifier powered by ESP32 that integrates Google Gemini AI to analyze environmental data and provide personalized health recommendations via a native Android App.',
+        features: [
+            'Automated humidity regulation using DHT sensors',
+            'Generative AI (Gemini) integration for health insights',
+            'Native Android App for real-time monitoring',
+            'Energy-efficient firmware design',
+            'Winner of National Veteran IoT Competition 2025'
+        ],
+        githubLink: 'https://github.com/Peteraw203/Smart_Dehumidifier_V2_AI',
+        demoLink: '#',
+        schematicImage: getImgPath('/images/portfolio/smart-dehumidifier-schematic.png'),
+        hardwareImage: getImgPath('/images/portfolio/smart-dehumidifier-hardware.jpg'),
+    },
+    {
+        image: getImgPath('/images/portfolio/road-detection.jpg'),
+        alt: 'Edge AI Road Detection Project',
+        title: 'Real-Time Road Detection',
+        slug: 'edge-ai-road-detection',
+        info: 'Edge AI & Computer Vision (YOLOv12)',
+        Class: 'md:mt-24',
+        techStack: ['C++', 'YOLOv12', 'NCNN Framework', 'Android', 'OpenCV'],
+        challenge: 'Running heavy deep learning object detection models on mobile devices with limited computational power and battery life without relying on cloud processing.',
+        solution: 'Deployed a quantized YOLOv12 model optimized with the NCNN framework on Android, enabling real-time (<50ms latency) pothole and road defect detection entirely on the edge.',
+        features: [
+            'Real-time inference on mobile CPU/GPU',
+            'NCNN Framework optimization for low latency',
+            'High accuracy road defect detection',
+            'No internet dependency (Edge Computing)'
+        ],
+        githubLink: 'https://github.com/Peteraw203/Yolo-V12-NCNN-Public',
+        demoLink: '#'
+    },
+    {
+        image: getImgPath('/images/portfolio/pantau-air.jpg'),
+        alt: 'Pantau Air Secure IoT',
+        title: 'Pantau Air: Secure Monitoring',
+        slug: 'pantau-air-secure-iot',
+        info: 'Encrypted IoT (ASCON & MQTT)',
+        Class: 'md:mt-0',
+        techStack: ['ESP32', 'MicroPython', 'ASCON Encryption', 'MQTT', 'Web Dashboard'],
+        challenge: 'Critical infrastructure monitoring systems are vulnerable to Man-in-the-Middle (MITM) attacks and data interception during transmission.',
+        solution: 'Implemented ASCON lightweight cryptography directly on ESP32 MicroPython firmware to encrypt sensor payloads before transmission via MQTT, ensuring end-to-end security.',
+        features: [
+            'Lightweight ASCON encryption on ESP32',
+            'Secure MQTT communication',
+            'Real-time water level visualization',
+            'Tamper-proof data transmission'
+        ],
+        githubLink: 'https://github.com/Peteraw203/Proyek-ASCON-IoT',
+        demoLink: 'thepantauair.web.app',
+        schematicImage: getImgPath('/images/portfolio/pantau-air-schematic.png'),
+
+    },
+    {
+        image: getImgPath('/images/portfolio/autonomus-rover.jpg'),
+        alt: 'Autonomous GPS Rover',
+        title: 'Autonomous GPS-Guided Rover',
+        slug: 'autonomous-gps-rover',
+        info: 'Robotics & Sensor Fusion',
+        Class: 'md:mt-24',
+        techStack: ['Arduino Uno', 'C++', 'GPS (NEO-6M)', 'Compass (HMC5883L)', 'Ultrasonic'],
+        challenge: 'Achieving precise autonomous navigation to specific coordinates using low-cost hardware with limited processing memory (SRAM).',
+        solution: 'Developed a navigation algorithm using the Haversine formula and Sensor (GPS + Compass) to calculate bearing and distance in real-time on an 8-bit microcontroller.',
+        features: [
+            'Waypoint navigation using Haversine algorithm',
+            'Sensor Fusion (GPS & Compass)',
+            'Obstacle avoidance logic',
+            'Optimized C++ firmware for Arduino Uno'
+        ],
+        githubLink: '#',
+        demoLink: '#',
+        schematicImage: getImgPath('/images/portfolio/autonomus-rover-schematic.png'),
+    },
+    {
+        image: getImgPath('/images/portfolio/control-shift-escape.jpg'),
+        alt: 'Control Shift Escape Game',
+        title: 'Control, Shift, Escape!',
+        slug: 'control-shift-escape',
+        info: 'Game Design (2nd Place National)',
+        Class: 'md:mt-0',
+        techStack: ['Unity', 'Game Design', 'Logic Mechanics'],
+        challenge: 'Designing complex puzzle mechanics that require players to manage two characters simultaneously under time constraints.',
+        solution: 'Created a unique "Shift" mechanic where players toggle control between characters to solve environmental puzzles, emphasizing logic and cooperation.',
+        features: [
+            '2nd Place Winner at 4C National Competition',
+            'Dual-character control mechanics',
+            'Complex level design & logic puzzles'
+        ],
+        githubLink: '#',
+        demoLink: 'https://doodez.itch.io/control-shift-escape',
+        schematicImage: getImgPath('/images/portfolio/ctrl1.jpg'),
+        hardwareImage: getImgPath('/images/portfolio/ctrl2.jpg'),
+    },
+    {
+        image: getImgPath('/images/portfolio/the-incursion.jpg'),
+        alt: 'The Incursion Game',
+        title: 'The Incursion',
+        slug: 'the-incursion',
+        info: 'Game Development (HackJam Winner)',
+        Class: 'md:mt-24',
+        techStack: ['Unity', 'Game Design'],
+        challenge: 'Developing a fully polished, bug-free action game loop within a strict 48-hour hackathon deadline.',
+        solution: 'Focused on "Juice" (game feel) and tight controls to create an addictive arcade shooter experience, resulting in a polished MVP.',
+        features: [
+            '1st Place Winner at HackJam 2024',
+            'Fast-paced arcade gameplay',
+            'Polished visual effects and feedback'
+        ],
+        githubLink: 'https://github.com/AbyanSyq/RAION_Hackjam_2024',
+        demoLink: 'https://ohm195.itch.io/the-incursion',
+        schematicImage: getImgPath('/images/portfolio/incursion1.jpg'),
+    },
+    {
+        image: getImgPath('/images/portfolio/isekai-bookstore.png'),
+        alt: 'Isekai Bookstore',
+        title: 'Isekai Bookstore',
+        slug: 'isekai-bookstore',
+        info: 'Game Development (Top 40 Student Gameseed)',
+        Class: 'md:mt-0',
+        techStack: ['Unity', 'C#', 'Management Systems'],
+        challenge: 'Making "old but new" game experience',
+        solution: 'Developed an simulation game and blend it with visual novel elements.',
+        features: [
+            'Top 40 Student Gameseed Competition',
+            'Interactive narrative system'
+        ],
+        githubLink: 'https://github.com/Doodesz/Gameseeded',
+        demoLink: 'https://jeijesh.itch.io/isekaibookstore'
+    },
 ]

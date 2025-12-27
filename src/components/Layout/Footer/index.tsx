@@ -11,15 +11,9 @@ const Footer: FC = () => {
           <div className='md:col-span-4 sm:col-span-6 col-span-12 sm:border-r border-b border-solid border-dark_border flex items-center sm:border-b-0 sm:min-h-25 py-10 shrink-0 '>
             <div className='sm:content-normal sm:text-start text-center content-center sm:w-auto w-full'>
               <Link href='/' className='md:block flex justify-center'>
-                <Image
-                  src={getImgPath('/images/logo/logo-white.svg')}
-                  alt='logo'
-                  width={160}
-                  height={50}
-                  style={{ width: 'auto', height: 'auto' }}
-                  quality={100}
-                  unoptimized
-                />
+                <h3 className='text-2xl font-bold text-white'>
+                  My Portfolio
+                </h3>
               </Link>
 
             </div>
@@ -83,31 +77,19 @@ const Footer: FC = () => {
                 About
               </Link>
             </li>
-            <li className='text-base text-white/50'>
-              <Link href='/#services' className='hover:text-primary'>
-                Services
-              </Link>
-            </li>
+
             <li className='text-base text-white/50'>
               <Link href='/portfolio' className='hover:text-primary'>
                 Portfolio
               </Link>
             </li>
-            <li className='text-base text-white/50'>
-              <Link href='/blog' className='hover:text-primary'>
-                Blog
-              </Link>
-            </li>
-            <li className='text-base text-white/50'>
-              <Link href='/contact' className='hover:text-primary'>
-                Contact
-              </Link>
-            </li>
+
+
           </ul>
         </div>
         <div>
           <p className='text-base text-white/50'>
-            © All rights reserved. Made by Peter modified from GetNextjs
+            © 2025 All rights reserved. Made by Peter modified from GetNextjs
           </p>
         </div>
       </div>

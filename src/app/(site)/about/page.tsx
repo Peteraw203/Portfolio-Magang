@@ -16,8 +16,8 @@ const page = () => {
   return (
     <>
       <HeroSub
-        title="About Us"
-        description="Discover a wealth of insightful materials meticulously crafted to provide you with a comprehensive understanding of the latest trends."
+        title="About Peter"
+        description=""
         breadcrumbLinks={breadcrumbLinks}
       />
       <Counter isColorMode={true} />

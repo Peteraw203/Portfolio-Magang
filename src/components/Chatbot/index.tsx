@@ -81,7 +81,7 @@ const Chatbot = () => {
     // Auto-resize textarea logic could be added here, but input is simple for now
 
     return (
-        <div className='fixed bottom-4 right-4 md:bottom-8 md:right-10 z-[999] flex flex-col items-end gap-4 font-sans'>
+        <div className='fixed bottom-24 right-4 md:bottom-28 md:right-10 z-[999] flex flex-col items-end gap-4 font-sans'>
             {/* Chat Window */}
             <div
                 className={`transition-all duration-300 transform origin-bottom-right ${isOpen
@@ -160,12 +160,13 @@ const Chatbot = () => {
             {!isOpen && (
                 <button
                     onClick={() => setIsOpen(true)}
-                    className='w-14 h-14 bg-primary text-white rounded-full shadow-lg shadow-primary/30 flex items-center justify-center hover:scale-110 transition-transform duration-300 animate-bounce-slow group relative'>
+                    className='w-14 h-14 md:w-auto md:h-14 md:px-6 bg-primary text-white rounded-full shadow-lg shadow-primary/30 flex items-center justify-center hover:scale-110 transition-transform duration-300 animate-bounce-slow group relative gap-2'>
                     <span className="absolute -top-1 -right-1 flex h-3 w-3">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
                     </span>
                     <Icon icon='fluent:chat-20-filled' className='text-3xl' />
+                    <span className='hidden md:block font-semibold whitespace-nowrap'>Ask MARIN AI</span>
                 </button>
             )}
         </div>

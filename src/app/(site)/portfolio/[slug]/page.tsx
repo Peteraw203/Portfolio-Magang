@@ -14,10 +14,11 @@ export async function generateStaticParams() {
     }));
 }
 
-const PortfolioDetailPage = () => {
+const PortfolioDetailPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
+    const { slug } = await params;
     return (
         <>
-            <PortfolioDetail />
+            <PortfolioDetail slug={slug} />
         </>
     );
 };

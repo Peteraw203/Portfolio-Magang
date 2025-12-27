@@ -3,10 +3,10 @@ import { Metadata } from "next";
 import Hero from '@/components/Home/Hero';
 import Counter from '@/components/Home/Counter'
 import Progresswork from '@/components/Home/WorkProgress';
-import Services from '@/components/Home/Services';
+
 import Portfolio from '@/components/SharedComponent/portfollio'
-import Testimonial from '@/components/SharedComponent/Testimonial'
-import Blog from '@/components/SharedComponent/Blog'
+
+
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -18,10 +18,10 @@ export default function Home() {
       <Hero />
       <Counter isColorMode={false} />
       <Progresswork isColorMode={false} />
-      <Services />
+
       <Portfolio />
-      <Testimonial />
-      <Blog />
+
+
 
     </main>
   )

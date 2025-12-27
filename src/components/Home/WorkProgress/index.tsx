@@ -5,13 +5,13 @@ import { getImgPath } from '@/utils/image'
 
 // Data for Tech Stack
 const TechStack = [
-  { name: 'ESP32', icon: '/images/tech/esp32.svg' },
-  { name: 'Arduino IDE', icon: '/images/tech/arduino.svg' },
-  { name: 'MicroPython', icon: '/images/tech/micropython.svg' },
-  { name: 'MQTT', icon: '/images/tech/mqtt.svg' },
-  { name: 'Firebase', icon: '/images/tech/firebase.svg' },
-  { name: 'React', icon: '/images/tech/react.svg' },
-  { name: 'Next.js', icon: '/images/tech/nextjs.svg' },
+  { name: 'ESP', icon: '/images/tech/esp32.png' },
+  { name: 'Arduino IDE', icon: '/images/tech/arduino.png' },
+  { name: 'MicroPython', icon: '/images/tech/micropython.png' },
+  { name: 'MQTT', icon: '/images/tech/mqtt.png' },
+  { name: 'Firebase', icon: '/images/tech/firebase.png' },
+  { name: 'Ultralytics YOLO', icon: '/images/tech/ultralytics.png'},
+  { name: 'React.js', icon: '/images/tech/react.png' },
 ]
 
 const Progresswork = ({ isColorMode }: { isColorMode: Boolean }) => {

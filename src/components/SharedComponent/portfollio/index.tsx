@@ -23,10 +23,6 @@ const Portfolio = () => {
           Explore my portfolio showcase
         </h2>
         <div className='pb-14 inline-flex'>
-          <p className='text-base font-normal text-grey max-w-29 dark:text-white/50'>
-            Dive into a curated collection of my finest work, showcasing
-            expertise across various industries.
-          </p>
         </div>
       </div>
       <PortfolioCard />
