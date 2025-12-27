@@ -8,7 +8,7 @@ const PortfolioList = () => {
     <section id='portfolio' className='md:pb-24 pb-16 pt-8 dark:bg-darkmode'>
       <div className='flex flex-wrap gap-[2.125rem] lg:px-[2.125rem] px-0 max-w-[120rem] w-full justify-center m-auto'>
         {portfolioinfo.map((item, index) => (
-          <Link key={index} href={`/portfolio/#!`} passHref>
+          <Link key={index} href={`/portfolio/${item.slug}`} passHref>
             <div className={`w-[18rem] group ${item.Class}`}>
               <div className='relative overflow-hidden rounded-lg group-hover:scale-[1.1] group-hover:cursor-pointer transition-all duration-500'>
                 <Image

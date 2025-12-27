@@ -62,6 +62,4 @@ ui-debug.log*
 *.log
 logs
 *.log.*
-
-# Private Info
-src/components/Layout/Footer/index.tsx 
+ 

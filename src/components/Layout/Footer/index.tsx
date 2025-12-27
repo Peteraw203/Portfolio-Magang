@@ -32,24 +32,24 @@ const Footer: FC = () => {
               <div className='pb-5 sm:block flex'>
                 <p className='text-base font-bold text-white'>Phone</p>
                 <Link
-                  href='tel:+(62) 812-4972-0990'
+                  href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`}
                   className='text-2xl text-white/50 hover:text-white'>
-                  +(62) 812-4972-0990
+                  {process.env.NEXT_PUBLIC_PHONE_NUMBER}
                 </Link>
               </div>
               <div className='sm:block flex items-center gap-3'>
                 <p className='text-base font-bold text-white'>Email</p>
                 <Link
-                  href='mailto:peteraw203@gmail.com'
+                  href={`mailto:${process.env.NEXT_PUBLIC_EMAIL_ADDRESS}`}
                   className='text-2xl text-white/50 hover:text-white'>
-                  peteraw203@gmail.com
+                  {process.env.NEXT_PUBLIC_EMAIL_ADDRESS}
                 </Link>
               </div>
               <div>
                 <ul className='flex items-center gap-3 mt-[1.875rem]'>
                   <li className='group'>
                     <Link href='https://www.linkedin.com/in/peter-abednego-wijaya/' className='text-2xl text-white/50 hover:text-white'>
-                    Peter Abednego Wijaya
+                      Peter Abednego Wijaya
                       <svg
                         width='22'
                         height='23'
