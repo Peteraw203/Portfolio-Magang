@@ -81,13 +81,13 @@ const Chatbot = () => {
     // Auto-resize textarea logic could be added here, but input is simple for now
 
     return (
-        <div className='fixed bottom-8 right-24 z-[999] flex flex-col items-end gap-4 font-sans'>
+        <div className='fixed bottom-4 right-4 md:bottom-8 md:right-10 z-[999] flex flex-col items-end gap-4 font-sans'>
             {/* Chat Window */}
             <div
                 className={`transition-all duration-300 transform origin-bottom-right ${isOpen
                     ? 'scale-100 opacity-100 translate-y-0'
                     : 'scale-95 opacity-0 translate-y-4 pointer-events-none'
-                    } bg-white dark:bg-darklight border border-gray-200 dark:border-gray-700 shadow-2xl rounded-2xl w-[350px] sm:w-[380px] h-[500px] flex flex-col overflow-hidden`}>
+                    } bg-white dark:bg-darklight border border-gray-200 dark:border-gray-700 shadow-2xl rounded-2xl w-[calc(100vw-2rem)] sm:w-[380px] h-[500px] max-h-[80vh] flex flex-col overflow-hidden`}>
                 {/* Header */}
                 <div className='bg-primary p-4 flex items-center justify-between shrink-0'>
                     <div className='flex items-center gap-3'>
