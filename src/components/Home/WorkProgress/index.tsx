@@ -1,30 +1,26 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
-import { Progress as ProgressData } from '@/app/api/data' // Assuming Progress is correctly imported
 import { getImgPath } from '@/utils/image'
 
-
-// Define the interface for ProgressItem
-interface ProgressItem {
-  title: string
-  Progress: number
-}
+// Data for Tech Stack
+const TechStack = [
+  { name: 'ESP32', icon: '/images/tech/esp32.svg' },
+  { name: 'Arduino IDE', icon: '/images/tech/arduino.svg' },
+  { name: 'MicroPython', icon: '/images/tech/micropython.svg' },
+  { name: 'MQTT', icon: '/images/tech/mqtt.svg' },
+  { name: 'Firebase', icon: '/images/tech/firebase.svg' },
+  { name: 'React', icon: '/images/tech/react.svg' },
+  { name: 'Next.js', icon: '/images/tech/nextjs.svg' },
+]
 
 const Progresswork = ({ isColorMode }: { isColorMode: Boolean }) => {
-  const [progressValues, setProgressValues] = useState<ProgressItem[]>([]) // Initialize with ProgressItem[]
-  useEffect(() => {
-    // Fetch progress data or use static data (Progress array)
-    setProgressValues(ProgressData)
-  }, [])
-
   return (
     <section
-      className={`scroll-mt-25 ${
-        isColorMode
+      className={`scroll-mt-25 ${isColorMode
           ? 'dark:bg-darklight bg-section'
           : 'dark:bg-darkmode bg-white'
-      }`}
+        }`}
       id='about'>
       <div className='container mx-auto max-w-6xl px-4'>
         <div className='grid md:grid-cols-12 items-center gap-7'>
@@ -46,35 +42,35 @@ const Progresswork = ({ isColorMode }: { isColorMode: Boolean }) => {
             data-aos-duration='1000'>
             <div className='flex gap-2 items-center'>
               <span className='w-3 h-3 rounded-full bg-success'></span>
-              <span className='font-medium text-midnight_text text-sm dark:text-white/50'>
-                build everything
+              <span className='font-medium text-midnight_text text-sm dark:text-white/50 uppercase tracking-widest'>
+                THE ENGINEERING TOOLKIT
               </span>
             </div>
             <h2 className='pt-9 pb-8 text-midnight_text font-bold dark:text-white text-4xl'>
-              Build amazing websites and landing pages with ease
+              Building Scalable IoT Ecosystems from Hardware to Cloud
             </h2>
             <p className='text-gray dark:text-white/70 text-base font-semibold'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida.
+              I leverage a robust set of modern technologies to build end-to-end
+              IoT solutions. From low-level firmware optimization on ESP32 to
+              real-time data visualization on React dashboards.
             </p>
 
-            <div className='block mx-auto pt-12'>
-              {progressValues.map((item, index) => (
+            <div className='grid grid-cols-3 sm:grid-cols-4 gap-8 pt-12 items-center'>
+              {TechStack.map((item, index) => (
                 <div
                   key={index}
-                  className='progress_bar_item flex flex-wrap mb-8'>
-                  <div className='flex-1 w-auto text-sm font-normal text-grey mb-2 dark:text-white/50'>
-                    {item.title}
+                  className='flex flex-col items-center justify-center group gap-2'>
+                  <div className='relative w-16 h-16 transition-transform duration-300 transform group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100'>
+                    <Image
+                      src={getImgPath(item.icon)}
+                      alt={item.name}
+                      fill
+                      className='object-contain'
+                    />
                   </div>
-                  <div className='item_value shrink text-sm font-normal text-grey mb-2 dark:text-white/50'>
-                    {item.Progress}%
-                  </div>
-                  <div className='relative h-1 w-full bg-primary/30 rounded-md'>
-                    <div
-                      className='progress absolute left-0 top-0 bottom-0 h-full bg-primary rounded-md duration-100 ease-in-out'
-                      style={{ width: `${item.Progress}%` }}></div>
-                  </div>
+                  <span className='text-sm font-medium text-midnight_text dark:text-white/70 group-hover:text-primary transition-colors'>
+                    {item.name}
+                  </span>
                 </div>
               ))}
             </div>
