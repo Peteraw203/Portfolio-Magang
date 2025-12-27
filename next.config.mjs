@@ -3,7 +3,7 @@
 const basePath = "";
 
 const nextConfig = {
-  output: "export",
+  // output: "export", // Disabled to allow API routes (Chatbot)
   basePath,
   assetPrefix: basePath,
   images: {

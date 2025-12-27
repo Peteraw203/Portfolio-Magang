@@ -3,7 +3,7 @@ import PortfolioDetail from "@/components/portfolio/PortfolioDetail";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Project Details | Venus",
+    title: "Project Details | My Portfolio",
 };
 
 import { portfolioinfo } from "@/app/api/data";

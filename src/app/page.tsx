@@ -9,7 +9,7 @@ import Testimonial from '@/components/SharedComponent/Testimonial'
 import Blog from '@/components/SharedComponent/Blog'
 
 export const metadata: Metadata = {
-  title: "Venus",
+  title: "My Portfolio",
 };
 
 export default function Home() {

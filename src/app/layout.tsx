@@ -6,6 +6,7 @@ import { ThemeProvider } from "next-themes";
 import ScrollToTop from '@/components/ScrollToTop';
 import Aoscompo from "@/utils/aos";
 import NextTopLoader from 'nextjs-toploader';
+import Chatbot from "@/components/Chatbot";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
             <Footer />
           </Aoscompo>
           <ScrollToTop />
+          <Chatbot />
         </ThemeProvider>
 
       </body>

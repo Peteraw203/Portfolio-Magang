@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import Counter from "@/components/Home/Counter";
 import Progresswork from "@/components/Home/WorkProgress";
 export const metadata: Metadata = {
-    title: "About | Venus",
+  title: "About | My Portfolio",
 };
 
 const page = () => {
@@ -20,8 +20,8 @@ const page = () => {
         description="Discover a wealth of insightful materials meticulously crafted to provide you with a comprehensive understanding of the latest trends."
         breadcrumbLinks={breadcrumbLinks}
       />
-       <Counter isColorMode={true} />
-       <Progresswork isColorMode={true} />
+      <Counter isColorMode={true} />
+      <Progresswork isColorMode={true} />
     </>
   );
 };
