@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { getImgPath } from '@/utils/image'
+import { Icon } from '@iconify/react'
 
 // Data for Tech Stack
 const TechStack = [
@@ -10,16 +11,19 @@ const TechStack = [
   { name: 'MicroPython', icon: '/images/tech/micropython.png' },
   { name: 'MQTT', icon: '/images/tech/mqtt.png' },
   { name: 'Firebase', icon: '/images/tech/firebase.png' },
-  { name: 'Ultralytics YOLO', icon: '/images/tech/ultralytics.png'},
+  { name: 'Ultralytics YOLO', icon: '/images/tech/ultralytics.png' },
   { name: 'React.js', icon: '/images/tech/react.png' },
+  { name: 'WiFi', iconify: 'mdi:wifi' },
+  { name: 'BLE', iconify: 'mdi:bluetooth' },
+  { name: 'Atmel AVR', icon: '/images/tech/atmel.png' },
 ]
 
 const Progresswork = ({ isColorMode }: { isColorMode: Boolean }) => {
   return (
     <section
       className={`scroll-mt-25 ${isColorMode
-          ? 'dark:bg-darklight bg-section'
-          : 'dark:bg-darkmode bg-white'
+        ? 'dark:bg-darklight bg-section'
+        : 'dark:bg-darkmode bg-white'
         }`}
       id='about'>
       <div className='container mx-auto max-w-6xl px-4'>
@@ -60,13 +64,17 @@ const Progresswork = ({ isColorMode }: { isColorMode: Boolean }) => {
                 <div
                   key={index}
                   className='flex flex-col items-center justify-center group gap-2'>
-                  <div className='relative w-16 h-16 transition-transform duration-300 transform group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100'>
-                    <Image
-                      src={getImgPath(item.icon)}
-                      alt={item.name}
-                      fill
-                      className='object-contain'
-                    />
+                  <div className='relative w-16 h-16 flex items-center justify-center transition-transform duration-300 transform group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100'>
+                    {item.icon ? (
+                      <Image
+                        src={getImgPath(item.icon)}
+                        alt={item.name}
+                        fill
+                        className='object-contain'
+                      />
+                    ) : (
+                      <Icon icon={item.iconify || ''} className="text-5xl text-midnight_text dark:text-white" />
+                    )}
                   </div>
                   <span className='text-sm font-medium text-midnight_text dark:text-white/70 group-hover:text-primary transition-colors'>
                     {item.name}

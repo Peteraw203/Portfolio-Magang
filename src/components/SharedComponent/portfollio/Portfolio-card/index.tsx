@@ -10,6 +10,7 @@ import { portfolioinfo } from '@/app/api/data'
 const PortfolioCard = () => {
   const settings = {
     autoplay: true,
+    autoplaySpeed: 1500,
     dots: false,
     arrows: false,
     infinite: true,

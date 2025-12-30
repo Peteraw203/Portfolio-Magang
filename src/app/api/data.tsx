@@ -119,15 +119,16 @@ export const portfolioinfo: PortfolioItem[] = [
         Class: 'md:mt-0',
         techStack: ['ESP32', 'MicroPython', 'ASCON Encryption', 'MQTT', 'Web Dashboard'],
         challenge: 'Critical infrastructure monitoring systems are vulnerable to Man-in-the-Middle (MITM) attacks and data interception during transmission.',
-        solution: 'Implemented ASCON lightweight cryptography directly on ESP32 MicroPython firmware to encrypt sensor payloads before transmission via MQTT, ensuring end-to-end security.',
+        solution: 'Implemented ASCON lightweight cryptography directly on ESP32 MicroPython firmware to encrypt sensor payloads before transmission via MQTT, ensuring end-to-end security. Link: pantauair.web.app',
         features: [
             'Lightweight ASCON encryption on ESP32',
             'Secure MQTT communication',
             'Real-time water level visualization',
-            'Tamper-proof data transmission'
+            'Tamper-proof data transmission',
+            'Visit pantauair.web.app'
         ],
         githubLink: 'https://github.com/Peteraw203/Proyek-ASCON-IoT',
-        demoLink: 'thepantauair.web.app',
+        demoLink: 'https://thepantauair.web.app',
         schematicImage: getImgPath('/images/portfolio/pantau-air-schematic.png'),
 
     },
@@ -206,5 +207,48 @@ export const portfolioinfo: PortfolioItem[] = [
         ],
         githubLink: 'https://github.com/Doodesz/Gameseeded',
         demoLink: 'https://jeijesh.itch.io/isekaibookstore'
+    },
+
+    {
+        image: getImgPath('/images/portfolio/digital-logic.png'),
+        alt: 'Digital Logic Implementation',
+        title: 'Pure Hardware Digital Counter',
+        slug: 'digital-logic-counter',
+        info: 'Digital Electronics (Logic Gates)',
+        Class: 'md:mt-24', 
+        techStack: ['74HC Series ICs', 'Logic Gates (AND/OR/NOT)', '7-Segment Display', 'Digital Logic'],
+        challenge: 'Designing a 4-digit counter and display driver strictly using hardware logic gates without any microcontroller (No Arduino/ESP32), requiring complex wire management and boolean logic planning.',
+        solution: 'Implemented K-Maps to optimize gate usage and successfully built a functioning counter using 74HC series ICs on breadboards, demonstrating strong fundamental understanding of computer architecture.',
+        features: [
+            'Implementation of Truth Tables & K-Maps',
+            'Circuit troubleshooting',
+            '74HC Series Integration'
+        ],
+        githubLink: '#', 
+        demoLink: '#', 
+
+        schematicImage: getImgPath('/images/portfolio/digital-logic-schematic.png'),
+        hardwareImage: getImgPath('/images/portfolio/digital-logic-hardware.jpeg'),
+    },
+    {
+        image: getImgPath('/images/portfolio/dassai-mochi.jpeg'),
+        alt: 'Dassai Mochi BLE Device',
+        title: 'Dassai Mochi: BLE Wearable',
+        slug: 'dassai-mochi-ble',
+        info: 'IoT Wearable & BLE Protocol',
+        Class: 'md:mt-0',
+        techStack: ['ESP32-C3', 'C++', 'BLE (Bluetooth Low Energy)', 'OLED Display'],
+        challenge: 'Understanding and deploying low-power communication protocols (BLE) for wearable devices to interface with smartphones for real-time notifications.',
+        solution: 'Deployed and analyzed open-source firmware for the Dassai Mochi project. Focused on studying BLE GATT services to handle notification packets from Android/iOS efficiently.',
+        features: [
+            'Bluetooth Low Energy (BLE) implementation',
+            'Real-time Notification Parsing',
+            'OLED Animation & Graphics',
+            'Firmware Flashing & Debugging'
+        ],
+        githubLink: '#', 
+        demoLink: '#',
+        schematicImage: getImgPath('/images/portfolio/dassai-mochi-schematic.png'),
+        hardwareImage: getImgPath('/images/portfolio/dassai-mochi-hardware.jpeg'),
     },
 ]

@@ -81,10 +81,10 @@ const Chatbot = () => {
     // Auto-resize textarea logic could be added here, but input is simple for now
 
     return (
-        <div className='fixed bottom-24 right-4 md:bottom-28 md:right-10 z-[999] flex flex-col items-end gap-4 font-sans'>
+        <div className='fixed bottom-24 right-4 md:bottom-28 md:right-10 z-[999] flex flex-col items-end gap-4 font-sans pointer-events-none'>
             {/* Chat Window */}
             <div
-                className={`transition-all duration-300 transform origin-bottom-right ${isOpen
+                className={`pointer-events-auto transition-all duration-300 transform origin-bottom-right ${isOpen
                     ? 'scale-100 opacity-100 translate-y-0'
                     : 'scale-95 opacity-0 translate-y-4 pointer-events-none'
                     } bg-white dark:bg-darklight border border-gray-200 dark:border-gray-700 shadow-2xl rounded-2xl w-[calc(100vw-2rem)] sm:w-[380px] h-[500px] max-h-[80vh] flex flex-col overflow-hidden`}>
@@ -160,7 +160,7 @@ const Chatbot = () => {
             {!isOpen && (
                 <button
                     onClick={() => setIsOpen(true)}
-                    className='w-14 h-14 md:w-auto md:h-14 md:px-6 bg-primary text-white rounded-full shadow-lg shadow-primary/30 flex items-center justify-center hover:scale-110 transition-transform duration-300 animate-bounce-slow group relative gap-2'>
+                    className='pointer-events-auto w-14 h-14 md:w-auto md:h-14 md:px-6 bg-primary text-white rounded-full shadow-lg shadow-primary/30 flex items-center justify-center hover:scale-110 transition-transform duration-300 animate-bounce-slow group relative gap-2'>
                     <span className="absolute -top-1 -right-1 flex h-3 w-3">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>

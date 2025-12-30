@@ -7,7 +7,7 @@ const Logo: React.FC = () => {
   return (
     <Link href="/">
       <h3 className="text-2xl font-bold text-midnight_text dark:text-white">
-        My Portfolio
+        Peter Abednego Wijaya
       </h3>
     </Link>
   );
