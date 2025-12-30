@@ -30,11 +30,6 @@ const Hero = () => {
               className='py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300 px-8'>
               View Case Studies
             </a>
-            <a
-              href='#resume'
-              className='py-3 bg-transparent border border-blue-600 text-blue-600 dark:text-white dark:border-white rounded-md hover:bg-blue-600 hover:text-white transition duration-300 px-8'>
-              Download Resume
-            </a>
           </div>
         </div>
 
