@@ -69,39 +69,55 @@ ATURAN MENJAWAB:
 `;
 
 export async function POST(req: Request) {
-    try {
-        const { message } = await req.json();
-        const apiKey = process.env.GEMINI_API_KEY;
+   try {
+      const body = await req.json();
+      const { message } = body;
 
-        console.log("--- Debug Chat API ---");
-        console.log("API Key present:", !!apiKey);
-        if (apiKey) console.log("API Key length:", apiKey.length);
+      // Input Validation
+      if (!message || typeof message !== 'string') {
+         return NextResponse.json({ error: "Pesan tidak valid." }, { status: 400 });
+      }
+      if (message.length > 300) {
+         return NextResponse.json({ error: "Pesan terlalu panjang (maks 300 karakter)." }, { status: 400 });
+      }
 
-        if (!apiKey) {
-            console.error("Error: API Key is missing");
-            return NextResponse.json({ error: "API Key belum disetting di server" }, { status: 500 });
-        }
+      const apiKey = process.env.GEMINI_API_KEY;
 
-        const genAI = new GoogleGenerativeAI(apiKey);
-        const model = genAI.getGenerativeModel({
-            model: "gemini-2.5-flash",
-            systemInstruction: WEBSITE_CONTEXT,
-        });
+      console.log("--- Debug Chat API ---");
+      console.log("API Key present:", !!apiKey);
+      if (apiKey) console.log("API Key length:", apiKey.length);
 
-        const chat = model.startChat({
-            history: [],
-        });
+      if (!apiKey) {
+         console.error("Error: API Key is missing");
+         return NextResponse.json({ error: "API Key belum disetting di server" }, { status: 500 });
+      }
 
-        console.log("Sending message to Gemini...");
-        const result = await chat.sendMessage(message);
-        const response = result.response.text();
-        console.log("Received response from Gemini");
+      const genAI = new GoogleGenerativeAI(apiKey);
+      const model = genAI.getGenerativeModel({
+         model: "gemini-2.5-flash",
+         systemInstruction: WEBSITE_CONTEXT,
+      });
 
-        return NextResponse.json({ reply: response });
+      const chat = model.startChat({
+         history: [],
+      });
 
-    } catch (error: any) {
-        console.error("Error AI Detailed:", error);
-        const errorMessage = error?.message || "Unknown error";
-        return NextResponse.json({ error: `Gagal memproses pesan: ${errorMessage}` }, { status: 500 });
-    }
+      console.log("Sending message to Gemini...");
+      const result = await chat.sendMessage(message);
+      const response = result.response.text();
+      console.log("Received response from Gemini");
+
+      return NextResponse.json({ reply: response });
+
+   } catch (error: any) {
+      console.error("Error AI Detailed:", error);
+      const errorMessage = error?.message || "Unknown error";
+
+      // Handle Quota Error specifically if possible, or general 429
+      if (errorMessage.includes('429') || errorMessage.includes('Resource has been exhausted')) {
+         return NextResponse.json({ error: "Maaf, kuota harian habis. Silakan coba lagi besok." }, { status: 429 });
+      }
+
+      return NextResponse.json({ error: `Gagal memproses pesan: ${errorMessage}` }, { status: 500 });
+   }
 }

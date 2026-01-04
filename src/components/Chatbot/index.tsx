@@ -154,6 +154,12 @@ const Chatbot = () => {
                         <Icon icon='ic:round-send' className='text-xl' />
                     </button>
                 </form>
+                {/* Disclaimer */}
+                <div className="bg-gray-50 dark:bg-darklight px-4 pb-2 text-center">
+                    <p className="text-[10px] text-gray-400 dark:text-gray-500">
+                        Limit gratis: 20 pertanyaan/hari.
+                    </p>
+                </div>
             </div>
 
             {/* Toggle Button */}
