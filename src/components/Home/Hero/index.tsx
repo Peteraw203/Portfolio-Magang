@@ -19,10 +19,10 @@ const Hero = () => {
             </span>
           </div>
           <h1 className='text-midnight_text font-bold dark:text-white text-4xl  md:text-5xl md:leading-[1.15]'>
-            Bridging Hardware with Intelligent Software
+            Engineered for Efficiency at the hardware level
           </h1>
           <p className='text-grey dark:text-white/70 text-lg font-normal'>
-            Hi, I am Peter Abednego Wijaya. An IoT Engineer specializing in Embedded Systems, Network Security (CCNA), and Edge AI. I build secure, scalable, and intelligent IoT solutions for the future of Smart Cities.
+            Hi, I am Peter Abednego Wijaya. An IoT Engineer specializing in Embedded Systems, prototyping, soldering, Network Security (CCNA), and Edge AI. I build secure, scalable, and intelligent IoT hardware solutions for the future of Smart Cities.
           </p>
           <div className='flex gap-4'>
             <a
