@@ -51,12 +51,12 @@ const Progresswork = ({ isColorMode }: { isColorMode: Boolean }) => {
               </span>
             </div>
             <h2 className='pt-9 pb-8 text-midnight_text font-bold dark:text-white text-4xl'>
-              Building Scalable IoT Ecosystems from Hardware to Cloud
+              Building Reliable Embedded IoT Systems from Hardware to Device Level
             </h2>
             <p className='text-gray dark:text-white/70 text-base font-semibold'>
-              I leverage a robust set of modern technologies to build end-to-end
-              IoT solutions. From low-level firmware optimization on ESP32 to
-              real-time data visualization on React dashboards.
+              I focus on developing robust embedded systems with hands-on work in firmware development, 
+              sensor interfacing, and device-level optimization. From low-level programming on ESP32 to hardware wiring,
+              testing, and troubleshooting for real-world deployments.
             </p>
 
             <div className='grid grid-cols-3 sm:grid-cols-4 gap-8 pt-12 items-center'>
