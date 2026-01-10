@@ -87,7 +87,7 @@ export const portfolioinfo: PortfolioItem[] = [
             'Winner of National Veteran IoT Competition 2025'
         ],
         githubLink: 'https://github.com/Peteraw203/Smart_Dehumidifier_V2_AI',
-        demoLink: '#',
+        demoLink: 'https://youtu.be/IOAW6u4YWQM',
         schematicImage: getImgPath('/images/portfolio/smart-dehumidifier-schematic.png'),
         hardwareImage: getImgPath('/images/portfolio/smart-dehumidifier-hardware.jpg'),
     },
@@ -108,7 +108,7 @@ export const portfolioinfo: PortfolioItem[] = [
             'No internet dependency (Edge Computing)'
         ],
         githubLink: 'https://github.com/Peteraw203/Yolo-V12-NCNN-Public',
-        demoLink: '#'
+        demoLink: 'https://youtube.com/shorts/qOi0DggS33E'
     },
     {
         image: getImgPath('/images/portfolio/pantau-air.jpg'),
@@ -247,7 +247,7 @@ export const portfolioinfo: PortfolioItem[] = [
             'Firmware Flashing & Debugging'
         ],
         githubLink: '#', 
-        demoLink: '#',
+        demoLink: 'https://youtube.com/shorts/uTG-3IOYlTs',
         schematicImage: getImgPath('/images/portfolio/dassai-mochi-schematic.png'),
         hardwareImage: getImgPath('/images/portfolio/dassai-mochi-hardware.jpeg'),
     },
