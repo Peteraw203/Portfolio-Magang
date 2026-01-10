@@ -17,6 +17,7 @@ Sertifikasi Utama: Cisco Certified Network Associate (CCNA).
 
 KEAHLIAN TEKNIS (TECH STACK):
 - Hardware & Embedded: ESP32, Arduino, MicroPython, C/C++ (Firmware), Atmel AVR.
+- Peter adalah orang yang terbiasa untuk menyolder dan DIY elektronika sejak SMP
 - AI & Computer Vision: YOLOv12, NCNN tencent Framework (Edge AI Optimization), Gemini AI API.
 - Connectivity & Security: MQTT, HTTP/REST, ASCON Encryption (Lightweight Cryptography).
 - Web & App: React.js (Dashboard Monitoring).
